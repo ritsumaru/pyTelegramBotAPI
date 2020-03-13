@@ -1,0 +1,13 @@
+$ pip install pyTelegramBotAPI
+
+$ export BOT_API_TOKEN="<
+1079856998:AAFxLK4Tzsef9IDCUoQ1JQSikUgh2xhdGqw >"
+
+import os
+import telebot
+  
+bot = rpgtwice(os.environ['RPGTWICE'])
+@bot.message_handler(commands=['start', 'help'])
+def send_welcome(message):
+    bot.reply_to(message, u"Olá, bem-vindo ao bot!")
+bot.polling()
